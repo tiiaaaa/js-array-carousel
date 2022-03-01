@@ -2,9 +2,22 @@ div.container{
     height: 100vh;
 }
 
-div.my-album-box{
+div.row{
+    width: 100%;
+}
+
+div.my-album-box,
+div.my-carousel{
     height: 60vh;
     position: relative;
+}
+
+div.my-carousel{
+    display: none;
+}
+
+div.my-carousel.active{
+    display: block;
 }
 
 img.my-main-img,
@@ -22,7 +35,7 @@ div.my-box-img{
     position: relative;
 }
 
-button.my-btn{
+button.my-btn-up{
     position: absolute;
     top: .3rem;
     left: 50%;
