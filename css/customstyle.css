@@ -4,6 +4,7 @@ div.container{
 
 div.my-album-box{
     height: 60vh;
+    position: relative;
 }
 
 img.my-main-img,
