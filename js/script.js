@@ -40,3 +40,19 @@ nextButton.addEventListener("click", function(){
         console.log("siamo alla fine!");
     }
 });
+
+
+const prevButton = document.querySelector(".my-btn-up");
+console.log(prevButton);
+
+prevButton.addEventListener("click", function(){
+    if (activeElement > 0){
+        carouselElement[activeElement].classList.remove("active");
+
+        activeElement--;
+
+        carouselElement[activeElement].classList.add("active");
+    } else{
+        console.log("siamo alla fine!");
+    }
+})
