@@ -6,53 +6,69 @@ const items = [
     'img/05.jpg'
 ];
 
-let carouselContent = "";
+const title = [
+    'Svezia',
+    'Svizzera',
+    'Gran Bretagna',
+    'Germania',
+    'Paradise'
+];
 
-for (let i = 0; i < items.length; i = i + 1){
-    carouselContent += `
-    <div class="my-carousel">
-            <img class="my-main-img" src="${items[i]}" alt="picture">
-    </div>`
-}
+const text = [
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+    'Lorem ipsum',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+];
 
-const carouselWrapper = document.querySelector("div.my-carousel-box");
-carouselWrapper.innerHTML += carouselContent;
+// let carouselContent = "";
 
-const carouselElement = document.getElementsByClassName("my-carousel");
+// for (let i = 0; i < items.length; i = i + 1){
+//     carouselContent += `
+//     <div class="my-carousel">
+//             <img class="my-main-img" src="${items[i]}" alt="picture">
+//     </div>`
+// }
 
-carouselElement[0].classList.add("active");
-console.log(carouselElement);
+// const carouselWrapper = document.querySelector("div.my-carousel-box");
+// carouselWrapper.innerHTML += carouselContent;
 
-const nextButton = document.querySelector(".my-btn-down");
-console.log(nextButton);
+// const carouselElement = document.getElementsByClassName("my-carousel");
 
-let activeElement = 0;
+// carouselElement[0].classList.add("active");
+// console.log(carouselElement);
 
-nextButton.addEventListener("click", function(){
+// const nextButton = document.querySelector(".my-btn-down");
+// console.log(nextButton);
 
-    if (activeElement < 4){
-        carouselElement[activeElement].classList.remove("active");
+// let activeElement = 0;
 
-        activeElement++;
+// nextButton.addEventListener("click", function(){
 
-        carouselElement[activeElement].classList.add("active");
-    } else{
-        console.log("siamo alla fine!");
-    }
-});
+//     if (activeElement < 4){
+//         carouselElement[activeElement].classList.remove("active");
+
+//         activeElement++;
+
+//         carouselElement[activeElement].classList.add("active");
+//     } else{
+//         console.log("siamo alla fine!");
+//     }
+// });
 
 
-const prevButton = document.querySelector(".my-btn-up");
-console.log(prevButton);
+// const prevButton = document.querySelector(".my-btn-up");
+// console.log(prevButton);
 
-prevButton.addEventListener("click", function(){
-    if (activeElement > 0){
-        carouselElement[activeElement].classList.remove("active");
+// prevButton.addEventListener("click", function(){
+//     if (activeElement > 0){
+//         carouselElement[activeElement].classList.remove("active");
 
-        activeElement--;
+//         activeElement--;
 
-        carouselElement[activeElement].classList.add("active");
-    } else{
-        console.log("siamo alla fine!");
-    }
-})
+//         carouselElement[activeElement].classList.add("active");
+//     } else{
+//         console.log("siamo alla fine!");
+//     }
+// })
