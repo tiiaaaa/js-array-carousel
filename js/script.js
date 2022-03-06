@@ -1,4 +1,4 @@
-const items = [
+const images = [
     'img/01.jpg',
     'img/02.jpg',
     'img/03.jpg',
@@ -21,6 +21,43 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
+
+
+let sliderContent = "";
+let thumbnailsContent = "";
+
+for (let i = 0; i < images.length; i = i + 1){
+    sliderContent += `
+    <div class="my-carousel">
+        <img class="my-carousel-picture" src="${images[i]}" alt="${title[i]}">
+        <div class="my-carousel-description">
+            <h2>${title[i]}</h2>
+            <p>${title[i]}</p>
+        </div>
+    </div>`
+
+    thumbnailsContent += `
+    <div class="my-thumbnail">
+        <img class="my-thumbnail-img" src="${images[i]}" alt="${title[i]}">
+    </div>`
+}
+
+const sliderElement = document.querySelector("div.my-slider");
+sliderElement.innerHTML = sliderContent;
+
+const thumbnailsElement = document.querySelector("div.my-thumbnails");
+thumbnailsElement.innerHTML = thumbnailsContent;
+
+
+
+
+
+
+
+
+
+
+
 
 // let carouselContent = "";
 
