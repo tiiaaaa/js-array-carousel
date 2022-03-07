@@ -62,6 +62,8 @@ div.my-btn-down{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer;
 }
 
 div.my-btn-up{

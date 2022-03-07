@@ -46,7 +46,7 @@ const sliderElement = document.querySelector("div.my-slider");
 sliderElement.innerHTML = sliderContent;
 
 const thumbnailsElement = document.querySelector("div.my-thumbnails");
-thumbnailsElement.innerHTML = thumbnailsContent;
+thumbnailsElement.innerHTML += thumbnailsContent;
 
 
 
