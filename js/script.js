@@ -48,7 +48,43 @@ sliderElement.innerHTML = sliderContent;
 const thumbnailsElement = document.querySelector("div.my-thumbnails");
 thumbnailsElement.innerHTML += thumbnailsContent;
 
+let activeElement = 0;
 
+document.getElementsByClassName("my-carousel")[activeElement].classList.add("active");
+
+document.getElementsByClassName("my-thumbnail")[activeElement].classList.add("active");
+
+const upBtn = document.querySelector("div.my-btn-up");
+
+upBtn.addEventListener("click", function(){
+    document.getElementsByClassName("my-carousel")[activeElement].classList.remove("active");
+    document.getElementsByClassName("my-thumbnail")[activeElement].classList.remove("active");
+    
+    if(activeElement == 0){
+        activeElement = images.length -1;
+    }else{
+        activeElement--;
+    }
+
+    document.getElementsByClassName("my-carousel")[activeElement].classList.add("active");
+    document.getElementsByClassName("my-thumbnail")[activeElement].classList.add("active");
+})
+
+const downBtn = document.querySelector("div.my-btn-down");
+
+downBtn.addEventListener("click", function(){
+    document.getElementsByClassName("my-carousel")[activeElement].classList.remove("active");
+    document.getElementsByClassName("my-thumbnail")[activeElement].classList.remove("active");
+    
+    if(activeElement == images.length -1){
+        activeElement = 0
+    }else{
+        activeElement++;
+    }
+
+    document.getElementsByClassName("my-carousel")[activeElement].classList.add("active");
+    document.getElementsByClassName("my-thumbnail")[activeElement].classList.add("active");
+})
 
 
 
