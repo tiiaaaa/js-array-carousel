@@ -32,7 +32,7 @@ for (let i = 0; i < images.length; i = i + 1){
         <img class="my-carousel-picture" src="${images[i]}" alt="${title[i]}">
         <div class="my-carousel-description">
             <h2>${title[i]}</h2>
-            <p>${title[i]}</p>
+            <p>${text[i]}</p>
         </div>
     </div>`
 
